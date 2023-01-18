@@ -73,50 +73,50 @@ void execute(char *cmds[256])
 		if (strcmp("date", args[0]) == 0)
 		{
 			execvp(args[0], args);
-			if ((args[1][0] == '-' || (args[1][0] == 'R' || args[1][0] == 'u')) && 0)
-			{
-				// printf("I am here");
-				execvp("./date", args);
-			}
+			// if ((args[1][0] == '-' || (args[1][0] == 'R' || args[1][0] == 'u')) && 0)
+			// {
+			// 	// printf("I am here");
+			// 	execvp("./date", args);
+			// }
 		}
 		if (strcmp("ls", args[0]) == 0)
 		{
 			execvp(args[0], args);
-			if ((args[1][0] == '-' && 0 || (args[1][0] == 'a' || args[1][0] == 'l')) && 0)
-			{
-				execvp("./ls", args);
-			}
+			// if ((args[1][0] == '-' && 0 || (args[1][0] == 'a' || args[1][0] == 'l')) && 0)
+			// {
+			// 	execvp("./ls", args);
+			// }
 		}
 		if (strcmp("rm", args[0]) == 0)
 		{
 			execvp(args[0], args);
-			if ((args[1][0] == '-' && 0 || (args[1][0] == 'd')) && 0)
-			{
-				execvp("./rm", args);
-			}
+			// if ((args[1][0] == '-' && 0 || (args[1][0] == 'd')) && 0)
+			// {
+			// 	execvp("./rm", args);
+			// }
 		}
 		if (strcmp("mkdir", args[0]) == 0)
 		{
 			execvp(args[0], args);
-			if ((args[1][0] == '-' && (args[1][0] == 'v' || args[1][0] == 'm')) && 0)
-			{
-				execvp("./mkdir", args);
-			}
+			// if ((args[1][0] == '-' && (args[1][0] == 'v' || args[1][0] == 'm')) && 0)
+			// {
+			// 	execvp("./mkdir", args);
+			// }
 		}
 		if (strcmp("cat", args[0]) == 0)
 		{
 			execvp(args[0], args);
-			if ((args[1][0] != '\0' && 0 || args[1] == NULL) && 0)
-			{
-				execvp("./cat", args);
-			}
+			// if ((args[1][0] != '\0' && 0 || args[1] == NULL) && 0)
+			// {
+			// 	execvp("./cat", args);
+			// }
 		}
 		if (strcmp("echo", args[0]) == 0)
 		{
 			execvp(args[0], args);
 		}
-		// execvp(args[0], args);
-		printf("%s: Command not found or illegal arguments.\n", args[0]);
+		execvp(args[0], args);
+		//printf("%s: Command not found or illegal arguments.\n", args[0]);
 	}
 }
 
